@@ -3,6 +3,10 @@
 
 A real-time API monitoring platform that tracks endpoint health, detects anomalies, and sends automated alerts.
 
+## Live demo
+
+Frontend: https://metric-flow-sigma.vercel.app/login
+
 ## What it does
 
 MetricFlow monitors your APIs by pinging them every 30 seconds and collecting performance metrics like response time and uptime. It uses statistical analysis to detect unusual behavior and sends notifications when something goes wrong.
@@ -233,10 +237,8 @@ The dashboard was polling too often. A 5‑second interval with caching balanced
 - More HTTP method support  
 - Mobile-responsive alert dashboard  
 
-## Live demo
+ 
 
-Frontend: https://metric-flow-sigma.vercel.app  
-Backend: https://metricflow.onrender.com  
 
 ## License
 
