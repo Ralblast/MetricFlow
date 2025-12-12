@@ -53,7 +53,7 @@ export const detectAnomaly = async (orgId, metricType) => {
       });
 
       await sendAlert({
-        title: `🚨 ${metricType} Anomaly Detected`,
+        title: ` ${metricType} Anomaly Detected`,
         value: latestMetric.value.toFixed(2),
         threshold: warningThreshold.toFixed(2),
         severity: severity

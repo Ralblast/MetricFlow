@@ -35,7 +35,7 @@ export const sendDailyReport = async (reportData) => {
 
   try {
     const embed = {
-      title: '📊 Daily Performance Report',
+      title: ' Daily Performance Report',
       description: `Report generated for ${reportData.date}`,
       color: 3447003,
       fields: [
@@ -59,7 +59,7 @@ export const sendDailyReport = async (reportData) => {
     };
 
     await axios.post(process.env.DISCORD_WEBHOOK_URL, {
-      content: '📊 Daily Report Generated!',
+      content: ' Daily Report Generated!',
       embeds: [embed]
     });
 

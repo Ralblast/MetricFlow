@@ -39,29 +39,46 @@ I wanted to learn how to build a production-grade monitoring system from scratch
 
 ## Features
 
+## Features
+
 ### Core monitoring
-- Polls endpoints every 30 seconds  
-- Tracks response time, status codes, uptime  
-- Stores 30 days of data  
-- Supports GET and POST requests  
+- Polls API endpoints every 30 seconds
+- Tracks response time, status codes, and uptime
+- Stores last 30 days of historical data
+- Supports GET and POST requests
+- Multi-endpoint monitoring (up to 5 per organization)
 
 ### Anomaly detection
-- Statistical analysis every minute  
-- Mean + standard deviation (2σ warning, 3σ critical)  
-- Compares against a 7-day baseline  
-- Auto-generates alerts  
+- Statistical analysis using mean + standard deviation
+- Warning threshold: μ + 2σ, Critical threshold: μ + 3σ
+- Analyzes 7-day rolling baseline
+- Automatic alert generation
+- Real-time Discord webhook notifications (when configured)
 
 ### Automated reporting
-- Daily PDF reports (midnight)  
-- Includes summary metrics and alert counts  
-- Delivered via Discord webhooks  
-- Shows performance trends  
+- Daily PDF report generation at midnight
+- Aggregates average CPU, memory, and latency metrics
+- Summarizes alert counts (critical/warning)
+- Webhook delivery system (Discord API integrated)
+- *Note: Settings UI for webhook configuration planned for v2*
 
-### Multi-tenant design
-- Organization-level isolation  
-- Up to five endpoints per org  
-- Secure JWT-based auth  
-- Users belong to organizations  
+### Multi-tenant architecture
+- Organization-level data isolation
+- JWT-based authentication
+- Secure per-org endpoint management
+- User accounts tied to organizations
+
+## Future improvements
+
+- Settings page for user-configurable webhooks (Discord/Slack/custom)
+- Email notifications as webhook alternative
+- Custom alert thresholds per endpoint
+- Webhook forwarding for third-party integrations (PagerDuty, etc.)
+- CSV/JSON export for historical data
+- Additional HTTP methods (PUT, DELETE, PATCH)
+- Mobile-responsive alert management dashboard
+- Grafana-style query builder for metrics
+ 
 
 ## How to run locally
 

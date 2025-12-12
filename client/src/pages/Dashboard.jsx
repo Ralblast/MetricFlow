@@ -47,15 +47,15 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, []);
 
-  // Detect first-time user (separate useEffect)
+  
   useEffect(() => {
     if (metrics.length > 0 && !loading) {
       const oldestMetric = metrics[metrics.length - 1];
       const metricAge = Date.now() - new Date(oldestMetric.timestamp).getTime();
-      // If metrics are less than 5 minutes old, likely first login
+
       if (metricAge < 5 * 60 * 1000) {
         setIsFirstTime(true);
-        // Auto-hide after 12 seconds
+    
         setTimeout(() => setIsFirstTime(false), 12000);
       }
     }
@@ -74,12 +74,12 @@ export default function Dashboard() {
 
  const getFilteredMetrics = () => {
 
-  // Demo mode or nothing selected: show everything
+
   if (mode === 'demo' || !selectedApi) {
     return metrics;
   }
 
-  // Real API mode: only metrics for this endpoint
+
   const realApiMetrics = metrics.filter((m) => {
     if (!m.metadata) return false;
     
@@ -155,7 +155,6 @@ export default function Dashboard() {
         onModeChange={handleModeChange}
       />
 
-        {/* Welcome Banner for first-time users */}
         {isFirstTime && mode === 'demo' && (
           <div className="mb-6 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg p-6 text-white shadow-lg">
             <div className="flex items-start gap-4">

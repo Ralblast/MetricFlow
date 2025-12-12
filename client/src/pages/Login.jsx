@@ -75,10 +75,10 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex">
-      {/* Left Panel - Features (hidden on mobile, 40% on desktop) */}
+      
       <div className="hidden lg:flex lg:w-[40%] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-12 py-16 flex-col justify-between">
         <div>
-          {/* Logo */}
+         
           <div className="flex items-center gap-3 mb-16">
             <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center shadow-lg">
               <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -88,7 +88,7 @@ export default function Login() {
             <span className="text-2xl font-semibold text-white">MetricFlow</span>
           </div>
 
-          {/* Tagline */}
+         
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-3 leading-tight">
               Monitor your APIs<br />with confidence
@@ -98,7 +98,7 @@ export default function Login() {
             </p>
           </div>
 
-          {/* Features */}
+        
           <div className="space-y-5">
             {features.map((feature, index) => (
               <div key={index} className="flex gap-3">
@@ -114,7 +114,6 @@ export default function Login() {
           </div>
         </div>
 
-        {/* Footer stats */}
         <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-700">
           <div>
             <div className="text-2xl font-bold text-white">99.9%</div>
@@ -131,10 +130,9 @@ export default function Login() {
         </div>
       </div>
 
-      {/* Right Panel - Login Form (60% on desktop) */}
+     
       <div className="w-full lg:w-[60%] flex items-center justify-center p-8 bg-gray-50">
         <div className="w-full max-w-md">
-          {/* Mobile Logo (shown only on mobile) */}
           <div className="lg:hidden text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-4">
               <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -145,7 +143,7 @@ export default function Login() {
             <p className="text-sm text-gray-500">Real-time Metrics Pipeline</p>
           </div>
 
-          {/* Card */}
+        
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
             <h2 className="text-xl font-medium text-gray-900 mb-6">
               {isRegister ? 'Create your account' : 'Sign in'}
@@ -226,7 +224,7 @@ export default function Login() {
             </div>
           </div>
 
-          {/* Footer */}
+         
           <p className="text-center text-gray-500 text-xs mt-6">
             By continuing, you agree to our Terms of Service
           </p>
